@@ -7,7 +7,7 @@ pen.pensize(5)
 pen.shape("turtle")
 
 
-def draw_squares(x, y, edgeLength):
+def draw_squares(x, y):
     pen.begin_fill()
     pen.up()
     pen.goto(x, y)
@@ -19,4 +19,4 @@ def draw_squares(x, y, edgeLength):
 
 
 for x in range(-200, 200, 120):
-    draw_squares(x, 200, 30)
+    draw_squares(x, 200)
