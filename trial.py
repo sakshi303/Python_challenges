@@ -1,21 +1,25 @@
 # Text Animation -  www.101computing.net/text-based-animations/
+# Rocket Animation - www.101computing.net/text-based-animations/
 import os
 import time
 
 
-def animate_text(text):
-    numberOfCharacters = 1
+def animate_Rocket():
+    distanceFromTop = 20
     while True:
-        print("\n\n\n\n")
-        print(text[0:numberOfCharacters])
-        numberOfCharacters += 1
-        if numberOfCharacters > len(text):
-            numberOfCharacters = 0
+        print("\n" * distanceFromTop)
+        print("          /\        ")
+        print("          ||        ")
+        print("          ||        ")
+        print("         /||\        ")
         time.sleep(0.2)
         os.system('clear')
+        distanceFromTop = distanceFromTop - 1
+        if distanceFromTop < 0:
+            distanceFromTop = 20
 
-    # Main Program Starts Here....
 
+# Main Program Starts Here....
+animate_Rocket()
 
-animate_text("Hello Sakshi mad!")
 
