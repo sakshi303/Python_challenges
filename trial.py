@@ -1,25 +1,23 @@
-# Text Animation -  www.101computing.net/text-based-animations/
-# Rocket Animation - www.101computing.net/text-based-animations/
+# My Progress Bar - www.101computing.net/splash-screen-and-progress-bar
 import os
 import time
 
 
-def animate_Rocket():
-    distanceFromTop = 20
-    while True:
-        print("\n" * distanceFromTop)
-        print("          /\        ")
-        print("          ||        ")
-        print("          ||        ")
-        print("         /||\        ")
-        time.sleep(0.2)
+def progress_bar(seconds):
+    for progress in range(0, seconds + 1):
+        percent = (progress * 100) // seconds
+        print("\n")
+        print("Loading...")
+        print("<" + ("=" * progress) + ("" * (seconds - progress)) + "> " + str(percent) + "%")
+        print("\n")
+        time.sleep(1)
         os.system('clear')
-        distanceFromTop = distanceFromTop - 1
-        if distanceFromTop < 0:
-            distanceFromTop = 20
+
+    # Main Program Starts Here....
 
 
-# Main Program Starts Here....
-animate_Rocket()
+progress_bar(5)
+username = input("Type your username:")
+
 
 
